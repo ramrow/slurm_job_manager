@@ -45,7 +45,7 @@ def main():
     ap = argparse.ArgumentParser(description="Generate + submit LR sweep jobs")
     ap.add_argument("--template-yaml", default="config.yaml")
     ap.add_argument("--template-slurm", default="run_example.slurm.sh")
-    ap.add_argument("--base-output-dir", default="factory_qwen_results")
+    ap.add_argument("--base-output-dir", default="output")
     ap.add_argument("--submit", action="store_true")
     args = ap.parse_args()
 
@@ -63,7 +63,7 @@ def main():
 
     yamls = root / "yamls"
     slurms = root / "slurms"
-    outs = root / "slurm_outputs"
+    outs = root / "output"
     for d in (yamls, slurms, outs):
         d.mkdir(parents=True, exist_ok=True)
 
@@ -76,7 +76,7 @@ def main():
         spath = slurms / (tag + ".slurm")
 
         y = replace_yaml_value(yaml_tpl, "learning_rate", lr_s)
-        y = replace_yaml_value(y, "output_dir", "{}/{}".format(args.base_output_dir, tag))
+        y = replace_yaml_value(y, "output_dir", "output/{}".format(tag))
         ypath.write_text(y, encoding="utf-8")
 
         s = replace_train_line(slurm_tpl, str(ypath))
@@ -111,3 +111,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
