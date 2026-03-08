@@ -1,0 +1,22 @@
+{
+    "train": {
+        "hf_hub_url": "finalform/foamGPT-old",
+        "split": "train",
+        "formatting": "alpaca",
+        "columns": {
+            "prompt": "user_prompt",
+            "response": "file_content",
+            "system": "system_prompt"
+        }
+    },
+    "test": {
+        "hf_hub_url": "finalform/foamGPT-old",
+        "split": "test",
+        "formatting": "alpaca",
+        "columns": {
+            "prompt": "user_prompt",
+            "response": "file_content",
+            "system": "system_prompt"
+        }
+    }
+}
