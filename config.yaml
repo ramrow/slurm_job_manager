@@ -1,6 +1,6 @@
 model_name_or_path: Qwen/Qwen3-Coder-30B-A3B-Instruct
 trust_remote_code: true
-deepspeed: ds_z3_config.json
+deepspeed: /mnt/lustre/rpi/pxu10/manager/ds_z3_config.json
 
 ### method
 stage: sft
