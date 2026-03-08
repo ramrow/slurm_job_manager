@@ -4,7 +4,7 @@
 #SBATCH -p rpi
 #SBATCH -A rpi
 #SBATCH --gres=gpu:nvidia_h100_80gb_hbm3:4
-#SBATCH --time=25:00:00
+#SBATCH --time=35:00:00
 #SBATCH --output=%x_out
 #SBATCH --error=%x_err
 
