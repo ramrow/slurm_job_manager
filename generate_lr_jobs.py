@@ -44,7 +44,7 @@ def submit_sbatch(path):
 def main():
     ap = argparse.ArgumentParser(description="Generate + submit LR sweep jobs")
     ap.add_argument("--template-yaml", default="config.yaml")
-    ap.add_argument("--template-slurm", default="run_example.slurm.sh")
+    ap.add_argument("--template-slurm", default="run_example.sh")
     ap.add_argument("--base-output-dir", default="output")
     ap.add_argument("--submit", action="store_true")
     args = ap.parse_args()
