@@ -9,6 +9,6 @@
 #SBATCH --output=%x_out
 #SBATCH --error=%x_err
 
-export WANDB_PROJECT="manager"
+export WANDB_PROJECT="experiment"
 source /mnt/lustre/rpi/pxu10/factory/bin/activate
 llamafactory-cli train config.yaml
