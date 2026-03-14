@@ -15,7 +15,7 @@ lora_dropout: 0.1
 dataset: train
 template: qwen3_nothink
 cutoff_len: 4096
-overwrite_cache: true
+overwrite_cache: false
 preprocessing_num_workers: 16
 dataloader_num_workers: 4
 
